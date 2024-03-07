@@ -1,0 +1,26 @@
+{
+    "name": "Read in pt Medium",
+    "version": "1.0.0",
+    "description": "latest",
+    "manifest_version": 3,
+    "author": "raiane.dev",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "assets/icon.png",
+        "32": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon.png"
+    },
+    "content_scripts": [
+        {
+            "js": [
+                "scripts/content.js"
+            ],
+            "matches": [
+                "*://*.medium.com/*"
+            ]
+        }
+    ]
+}
