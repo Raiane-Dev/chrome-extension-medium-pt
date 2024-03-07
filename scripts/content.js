@@ -3,12 +3,12 @@ console.log("running");
 const section = document.querySelector('article section');
 
 async function translateText(text, target_ln) {
+    console.log(text)
     const res = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=pt&format=json&dt=t&q=" + encodeURI(text), {
         method: "GET",
     });
     
     const data = await res.text();
-    console.log(JSON.parse(data)[0])
     return JSON.parse(data)[0].map(s => s[0]).join("\n") ?? "";
 }
 
